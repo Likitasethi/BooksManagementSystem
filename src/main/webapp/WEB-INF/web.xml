@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         id="WebApp_ID" version="5.0">
+    
+    <display-name>Library_Management_System</display-name>
+
+    <!-- Set the default welcome page to registration page -->
+    <welcome-file-list>
+        <welcome-file>registration.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Registration Servlet -->
+    <servlet>
+        <description>Registration Servlet</description>
+        <display-name>RegistrationServlet</display-name>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <servlet-class>com.test.registration.RegistrationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <url-pattern>/RegistrationServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Login Servlet -->
+    <servlet>
+        <description>Login Servlet</description>
+        <display-name>LoginServlet</display-name>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.test.registration.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Logout Servlet -->
+    <servlet>
+        <description>Logout Servlet</description>
+        <display-name>LogoutServlet</display-name>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.test.registration.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Book Register Servlet -->
+    <servlet>
+        <description>Book Register Servlet</description>
+        <display-name>BookRegister</display-name>
+        <servlet-name>BookRegister</servlet-name>
+        <servlet-class>com.test.database.BookRegister</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookRegister</servlet-name>
+        <url-pattern>/BookRegister</url-pattern>
+    </servlet-mapping>
+
+    <!-- Delete Book Servlet -->
+    <servlet>
+        <description>Delete Book Servlet</description>
+        <display-name>DeleteBook</display-name>
+        <servlet-name>DeleteBook</servlet-name>
+        <servlet-class>com.test.database.DeleteBook</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteBook</servlet-name>
+        <url-pattern>/DeleteBook</url-pattern>
+    </servlet-mapping>
+
+    <!-- Update Book Servlet -->
+    <servlet>
+        <description>Update Book Servlet</description>
+        <display-name>UpdateBook</display-name>
+        <servlet-name>UpdateBook</servlet-name>
+        <servlet-class>com.test.database.UpdateBook</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateBook</servlet-name>
+        <url-pattern>/UpdateBook</url-pattern>
+    </servlet-mapping>
+
+</web-app>
